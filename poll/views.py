@@ -6,13 +6,12 @@ from .models import Question
 # Create your views here.
 def detail(request, question_id):
     try:
-        question_text = Question.objects.get(id=question_id)
+        question = Question.objects.get(id=question_id)
     except Question.DoesNotExist:
         raise Http404("Question does not exist")
 
-    reply = f"""Here is question number {question_id}:
-    <br>{question_text}"""
-    return HttpResponse(reply)
+    context = {'question': question}
+    return render(request, 'poll/detail.html', context)
 
 
 def index(request):
