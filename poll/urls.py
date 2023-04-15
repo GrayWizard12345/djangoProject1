@@ -24,4 +24,5 @@ urlpatterns = [
          views.detail, name='detail'),
     path('latest_questions/', views.index, name='index'),
     path('vote/<int:question_id>/', views.vote, name='vote'),
+    path('results/<int:question_id>/', views.results, name='results')
 ]

@@ -1,0 +1,13 @@
+li a {
+    color: rgba(0, 0, 0, 0.53);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+body {
+    background-image: url("img.png");
+}
